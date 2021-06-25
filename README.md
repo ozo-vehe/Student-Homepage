@@ -1,2 +1,2 @@
 # Student-Homepage
-Student homepage after sign upmor login
+Student homepage after sign up or login
