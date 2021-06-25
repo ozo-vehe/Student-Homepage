@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    --border-color: #c4c4c4;
+    --green-color: #3e8a23;
+    --red-color: #d2492f;
+    --blue-color: #4688b0;
+    --gold-color: #c09728;
+    --para-color: #818181;
+    --header-color: #000;
+    --bg-color: #fff;
+    --bg-color-two: #ebebeb;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: var(--para-color);
+    background-color: var(--bg-color);
+}
+h1 {
+    font-size: 24px;
+    color: var(--header-color);
+    text-transform: capitalize;
+}
+.far {
+    color: var(--para-color);
+    font-size: 17px;
+    cursor: pointer;
+}
+i {
+    padding: 0px;
+    width: 15%;
+}
+
+/***************    HEADER SECTION      *********************/
+header {
+    width: 100%;
+    height: 100vh;
+}
+/***************    Navigation      **********************/
+header .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 5%;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .logo {
+    width: 130px;
+    height: auto;
+}
+.logo img {
+    width: 100%;
+}
+
+.navigationSection {
+    width: 400px;
+}
+.navigationSection > ul {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.navigationSection > ul > li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 7px;
+    border-radius: 3px;
+}
+.navigationSection > ul > li > i {
+    display: inline;
+    margin-left: 5px;
+    cursor: pointer;
+}
+/**************     Category Section    ******************/
+.navigationSection .category {
+    position: relative;
+}
+.category .catDropdownMenu {
+    background-color: var(--bg-color);
+    color: var(--para-color);
+    position: absolute;
+    left: 50%;
+    top: 115%;
+    height: 0px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    padding: 0px;
+    margin: 0px;
+    z-index: 2;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px var(--border-color);
+    transition: all .1s;
+}
+.category .catDropdownMenu > li {
+    position: relative;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px 0px;
+    margin: 15px;
+    width: 200px;
+}
+.category .catDropdownMenu > li > i {
+    text-align: right;
+    cursor: pointer;
+}
+.catDropdownMenu.showDropdownMenu {
+    height: 460px;
+    overflow: visible;
+}
+/**********     Games, basic school & high school subjects section   ***************/
+.games ul,
+.basicSchSbjs ul,
+.highSchSbjs ul
+{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    left: calc(100% + 20px);
+    top: 0px;
+    height: 0%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    border-radius: 3px;
+    transition: all .2s;
+    z-index: 2;
+}
+.games ul li,
+.basicSchSbjs ul li,
+.highSchSbjs ul li {
+    list-style-type: none;
+    margin: 5px 0px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+.games ul li:hover,
+.basicSchSbjs ul li:hover,
+.highSchSbjs ul li:hover {
+    background-color: var(--bg-color-two);
+    color: var(--header-color);
+}
+.games ul.showDropdownMenu {
+    border: thin solid var(--bg-color-two);
+    height: 165px;
+}
+.basicSchSbjs ul.showDropdownMenu {
+    height: 205px;
+    border: thin solid var(--bg-color-two);
+}
+.highSchSbjs ul.showDropdownMenu {
+    border: thin solid var(--bg-color-two);
+    height: 320px;
+}
+/*************      My learning section     *************/
+.myLearning {
+    position: relative;
+}
+.myLearning p {
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px var(--para-color);
+    padding: 0px;
+    font-size: 12px;
+    width: 150%;
+    height: 0%;
+    overflow: hidden;
+    z-index: 2;
+    transition: all .2s;
+}
+.learningDropdownMenu.showDropdownMenu {
+    height: 100%;
+}
+/**************     Search bar      *************/
+.searchBar {
+    width: 250px;
+    height: 35px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: thin solid var(--border-color);
+    border-radius: 10px;
+}
+.searchBar input {
+    color: var(--para-color);
+    padding-left: 5px;
+    font-size: 14px;
+    height: 100%;
+    outline: none;
+    font-family: 'Montserrat';
+}
+.searchBar i {
+    cursor: pointer;
+}
+
+.userSection {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.userNotification p {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px var(--para-color);
+    padding: 0px;
+    font-size: 12px;
+    width: 110%;
+    height: 0%;
+    overflow: hidden;
+    z-index: 2;
+    transition: all .2s;
+}
+.userNotification p.showDropdownMenu {
+    height: 100%;
+    padding: 10px 5px;
+}
+
+.userSection .userImg {
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+}
+.userImg img {
+    width: 100%;
+}
+.userImg .profileDropdownMenu {
+    border-radius: 5px;
+    height: 0%;
+    font-size: 14px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    background-color: var(--bg-color);
+    right: -40px;
+    top: 45px;
+    z-index: 2;
+    transition: all .3s;
+}
+.profileDropdownMenu h2 a {
+    color: var(--header-color);
+    text-decoration: none;
+}
+.profileDropdownMenu p {
+    color: var(--header-color);
+}
+.profileDropdownMenu ul {
+    margin: 0px;
+    padding: 0px;
+}
+.profileDropdownMenu ul li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px auto;
+    width: 200px;
+    transition: all .3s;
+}
+.profileDropdownMenu ul li:hover {
+    background-color: var(--bg-color-two);
+    color: var(--header-color);
+}
+.profileDropdownMenu ul li a {
+    color: var(--para-color);
+    text-decoration: none;
+}
+.profileDropdownMenu.showDropdownMenu {
+    padding: 10px 5px;
+    height: auto;
+    border: thin solid var(--bg-color-two);
+}
+
+/*****************      Header Content      ***********************/
+.headerContent {
+    height: 500px;
+    padding: 0px 5%;
+    position: relative;
+}
+.headerContent img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.headerContent h2 {
+    color: var(--bg-color);
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-size: 40px;
+    font-weight: 900;
+}
+.headerContent h2 span {
+    font-weight: 300;
+}
+
+/**************     MAIN SECTION    ***********************/
+main {
+    margin: 0px;
+    padding: 0px 5%;
+}
+main h1 {
+    font-size: 30px;
+}
+/************   Live classes Section     **********************/
+main .liveClasses {
+    text-align: center;
+}
+.liveClasses .liveClassesImgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.liveClassesImgs .images {
+    border-radius: 50%;
+    width: 200px;
+    padding: 15px;
+    height: 200px;
+    margin: 10px 0px;
+    position: relative;
+}
+.images img {
+    width: 100%;
+}
+.images .ellipse {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+/**************    Recommended classes section    ****************/
+.recomClasses {
+    margin: 7% 0px;
+}
+.recomClasses > p {
+    text-align: right;
+    margin: 0px;
+    color: var(--red-color);
+    cursor: pointer;
+}
+.recomClasses .classes {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.classes p {
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    width: 180px;
+    background-color: var(--bg-color-two);
+    padding: 15px;
+    margin: 10px 25px 10px 0px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.classes p:hover {
+    color: var(--header-color);
+    background-color: var(--border-color);
+}
+
+/***********    Home teach section      **********************/
+.homeTeachSection {
+    margin: 50px 0px;
+    padding: 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.homeTeachSection h3 {
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0px;
+}
+.homeTeachDemo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.homeTeachDemo p {
+    margin: 5px 0px;
+    color: var(--green-color);
+}
+.homeTeachDemo div {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #f2ffee;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 3px var(--border-color);
+}
+.homeTeachDemo div img {
+    width: 30%;
+    height: 30%;
+}
+
+.homeTeachReminder {
+    text-align: center;
+}
+.homeTeachReminder h3 {
+    font-size: 40px;
+    display: inline-block;
+}
+.homeTeachReminder i {
+    color: var(--red-color);
+    font-size: 30px;
+    display: inline-block;
+}
+.homeTeachReminder p {
+    width: 80%;
+    margin: 5px auto;
+    background-color: #fcfcfc;
+    text-align: center;
+    color: var(--green-color);
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px var(--border-color);
+}
+.homeTeachReminder button {
+    padding: 13px 20px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    border-radius: 5px;
+    width: 200px;
+    margin: 20px 10px;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: all .3s;
+}
+.homeTeachReminder button:hover {
+    box-shadow: 0px 0px 3px var(--border-color);
+}
+.homeTeachReminder .viewCal {
+    background-color: var(--red-color);
+    margin-left: 0px;
+}
+.homeTeachReminder .newRem {
+    background-color: var(--green-color);
+    margin-right: 0px;
+}
+
+.classesImg {
+    width: 550px;
+}
+.classesImg img {
+    width: 100%;
+}
+
+/*****************     Teachers section      ***************/
+.teachersSection {
+    text-align: center;
+    margin: 50px 0px;
+}
+.teachersSection h1,
+.teachersSection p 
+{
+    margin: 15px 0px;
+}
+.teachersSection > button {
+    background-color: var(--bg-color);
+    border: 2px solid var(--green-color);
+    border-radius: 7px;
+    width: 300px;
+    padding: 10px 20px;
+    margin: 15px 20px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+}
+
+.teachersProfilePic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+.teachersProfilePic > div {
+    width: 300px;
+    margin: 10px 0px;
+}
+.teachersProfilePic > div img {
+    width: 250px;
+    height: 300px;
+    -webkit-filter: drop-shadow(0px 5px 2px var(--border-color));
+    filter: drop-shadow(0px 5px 2px var(--border-color));
+}
+.teachersProfilePic > div p {
+    font-size: 18px;
+}
+.teachersProfilePic > div button {
+    background-color: var(--red-color);
+    color: var(--bg-color);
+    padding: 10px 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/******************     FOOTER SECTION      *******************/
+footer {
+    margin-top: 70px;
+    padding: 10px 0px 0px 0px;
+}
+footer .teachOnline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--red-color);
+    color: var(--bg-color);
+    padding: 10px 5%;
+}
+.teachOnline button {
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    background-color: var(--bg-color);
+    color: var(--red-color);
+    padding: 13px 30px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 5px var(--para-color);
+}
+.teachOnlineText h2 {
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+.teachOnlineText p {
+    margin-top: 5px;
+}
+
+.footerContact {
+    background: url("/images/footer\ image.png"), no-repeat, fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 40px 5%;
+}
+.footerLogoLinks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerLogoLinks img {
+    width: 180px;
+}
+.footerLinks {
+    width: 600px;
+}
+.footerLinks ul {
+    padding: 0px;
+    margin: 0px;
+}
+.footerLinks ul li {
+    text-align: center;
+    width: 150px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 15px 10px;
+    cursor: pointer;
+}
+
+.footerLangSelection {
+    padding: 50px 0px 10px 0px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.footerLangSelection span {
+    margin: 5px;
+    font-size: 14px;
+}
+.bold {
+    color: var(--header-color);
+    font-weight: 700;
+}
+
+/*******************    MEDIA QUERRY    **********************/
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+        color: var(--header-color);
+        text-transform: capitalize;
+    }
+    .far {
+        color: var(--para-color);
+        font-size: 17px;
+        cursor: pointer;
+    }
+    i {
+        padding: 0px;
+        width: 15%;
+    }
+    
+    /***************    HEADER SECTION      *********************/
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    /***************    Navigation      **********************/
+    header .nav {
+        flex-direction: column;
+    }
+    
+    .navigationSection {
+        width: auto;
+    }
+    .navigationSection > ul > li {
+        text-align: center;
+        list-style-type: none;
+        display: inline-block;
+        margin: 0px 10px;
+        padding: 7px;
+        border-radius: 3px;
+    }
+    .navigationSection > ul > li > i {
+        display: inline;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    /**************     Category Section    ******************/
+    .navigationSection .category {
+        position: relative;
+    }
+    .category .catDropdownMenu {
+        left: 0%;
+        transform: translateX(0%);
+    }
+    /**********     Games, basic school & high school subjects section   ***************/
+    .games ul,
+    .basicSchSbjs ul,
+    .highSchSbjs ul
+    {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        top: 40px;
+        height: 0px;
+    }
+    .games ul li,
+    .basicSchSbjs ul li,
+    .highSchSbjs ul li {
+        margin: 5px auto;
+    }
+    /*************      My learning section     *************/
+    .myLearning {
+        position: relative;
+    }
+    .myLearning p {
+        left: 35%;
+        top: 35px;
+    }
+    .learningDropdownMenu.showDropdownMenu {
+        height: 100%;
+    }
+    /**************     Search bar      *************/
+    .searchBar {
+        margin: 10px 0px;
+    }
+    
+    .userSection {
+        width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+     .userNotification p {
+        top: 35px;
+    }
+    .userNotification p.showDropdownMenu {
+        height: 100%;
+        padding: 10px 5px;
+    }
+
+    /*****************      Header Content      ***********************/
+    .headerContent {
+        height: 400px;
+    }
+    .headerContent img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .headerContent h2 {
+        right: 5%;
+        bottom: 15%;
+        font-size: 30px;
+    }
+    
+    /**************     MAIN SECTION    ***********************/
+    main h1 {
+        font-size: 25px;
+    }
+    /************   Live classes Section     **********************/
+
+    /**************    Recommended classes section    ****************/
+    .recomClasses .classes {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /***********    Home teach section      **********************/
+    .homeTeachSection h3 {
+        font-size: 25px;
+    }
+    .homeTeachDemo {
+        margin-bottom: 20px;
+    }
+    .homeTeachDemo div {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .homeTeachReminder { text-align: center; }
+    .homeTeachReminder h3 { font-size: 25px; }
+    .homeTeachReminder i { font-size: 25px; }
+    .homeTeachReminder .viewCal { margin-right: 0px; }
+    .homeTeachReminder .newRem { margin-left: 0px; }
+
+    /*****************     Teachers section      ***************/
+    /******************     FOOTER SECTION      *******************/
+    .footerLinks {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
